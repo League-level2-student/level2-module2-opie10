@@ -33,6 +33,7 @@ int sd = UP ;
 int fe = 0 ;
 ArrayList<Segment>body = new ArrayList<Segment>();
 int direction = UP;
+int c;
 //*
 // ***** SETUP METHODS *****
 // These methods are called at the start of the game.
@@ -66,6 +67,7 @@ void draw() {
   manageTail();
   eat();
   move();
+  checkTailCollision();
 }
 
 void drawFood() {
@@ -105,10 +107,14 @@ body.remove(0);
 
 void checkTailCollision() {
   //If the snake crosses its own tail, shrink the tail back to one segment
-  //if(){
+  for(int i =0; i< body.size() ; i++){
+ Segment size = body.get(c);
+ if(head.x == size.x && head.y == size.y){
+   body.clear();
   
+ }
   }
-//}
+}
 
 
 
